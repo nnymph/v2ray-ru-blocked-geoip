@@ -1,0 +1,310 @@
+{
+  "input": [
+    {
+      "type": "v2rayGeoIPDat",
+      "action": "add",
+      "args": {
+        "uri": "https://github.com/Loyalsoldier/geoip/raw/release/geoip.dat"
+      }
+    },
+    {
+      "type": "text",
+      "action": "add",
+      "args": {
+        "name": "ru-blocked",
+        "uri": "https://antifilter.download/list/ipresolve.lst"
+      }
+    },
+    {
+      "type": "text",
+      "action": "add",
+      "args": {
+        "name": "ru-blocked",
+        "uri": "https://antifilter.download/list/subnet.lst"
+      }
+    },
+    {
+      "type": "text",
+      "action": "add",
+      "args": {
+        "name": "ru-blocked-community",
+        "uri": "https://community.antifilter.download/list/community.lst"
+      }
+    },
+    {
+      "type": "text",
+      "action": "add",
+      "args": {
+        "name": "re-filter",
+        "uri": "https://raw.githubusercontent.com/1andrevich/Re-filter-lists/refs/heads/main/ipsum.lst"
+      }
+    },
+    {
+      "type": "text",
+      "action": "add",
+      "args": {
+        "name": "discord",
+        "uri": "https://iplist.opencck.org/?format=text&data=ip4&site=discord.com&site=discord.gg&site=discord.media"
+      }
+    },
+    {
+      "type": "text",
+      "action": "add",
+      "args": {
+        "name": "discord",
+        "uri": "https://iplist.opencck.org/?format=text&data=ip6&site=discord.com&site=discord.gg&site=discord.media"
+      }
+    },
+
+    {
+      "type": "text",
+      "action": "add",
+      "args": {
+        "name": "nnymph-proxy",
+        "uri": "./v2ray-personal-ip-list/nnymph-proxy.txt"
+      }
+    },
+    {
+      "type": "text",
+      "action": "add",
+      "args": {
+        "name": "nnymph-block",
+        "uri": "./v2ray-personal-ip-list/nnymph-block.txt"
+      }
+    },
+    {
+      "type": "text",
+      "action": "add",
+      "args": {
+        "name": "nnymph-direct",
+        "uri": "./v2ray-personal-ip-list/nnymph-direct.txt"
+      }
+    },
+
+    {
+      "type": "maxmindGeoLite2ASNCSV",
+      "action": "add",
+      "args": {
+        "ipv4": "https://github.com/Loyalsoldier/geoip/raw/release/GeoLite2-ASN-Blocks-IPv4.csv",
+        "ipv6": "https://github.com/Loyalsoldier/geoip/raw/release/GeoLite2-ASN-Blocks-IPv6.csv",
+        "wantedList": {
+          "ddos-guard": [
+            "AS57724",
+            "AS49612",
+            "AS44556"
+          ],
+          "yandex": [
+            "AS13238",
+            "AS44534",
+            "AS200350",
+            "AS202611",
+            "AS202248",
+            "AS207207",
+            "AS210656",
+            "AS213952",
+            "AS215013",
+            "AS215109",
+            "AS208722"
+          ]
+        }
+      }
+    },
+    {
+      "type": "private",
+      "action": "add"
+    }
+  ],
+  "output": [
+    {
+      "type": "v2rayGeoIPDat",
+      "action": "output",
+      "args": {
+        "outputDir": "./output",
+        "outputName": "geoip.dat"
+      }
+    },
+    {
+      "type": "text",
+      "action": "output",
+      "args": {
+        "outputDir": "./output",
+        "outputName": "geoip.txt",
+        "wantedList": [
+          "ru-blocked",
+          "ru-blocked-community",
+          "re-filter",
+          "nnymph-proxy"
+        ]
+      }
+    },
+    {
+      "type": "v2rayGeoIPDat",
+      "action": "output",
+      "args": {
+        "outputDir": "./output",
+        "outputName": "geoip-asn.dat",
+        "wantedList": [
+          "cloudflare",
+          "cloudfront",
+          "facebook",
+          "fastly",
+          "google",
+          "netflix",
+          "telegram",
+          "ddos-guard",
+          "yandex",
+          "twitter",
+          "discord",
+          "youtube"
+        ]
+      }
+    },
+    {
+      "type": "v2rayGeoIPDat",
+      "action": "output",
+      "args": {
+        "outputDir": "./output",
+        "outputName": "geoip-ru-only.dat",
+        "wantedList": [
+          "ru-blocked",
+          "ru-blocked-community",
+          "re-filter",
+          "nnymph-proxy",
+          "private"
+        ]
+      }
+    },
+    {
+      "type": "v2rayGeoIPDat",
+      "action": "output",
+      "args": {
+        "outputDir": "./output",
+        "oneFilePerList": true,
+        "wantedList": [
+          "ru-blocked",
+          "ru-blocked-community",
+          "re-filter",
+          "nnymph-proxy",
+          "private"
+        ]
+      }
+    },
+    {
+      "type": "v2rayGeoIPDat",
+      "action": "output",
+      "args": {
+        "oneFilePerList": true
+      }
+    },
+    {
+      "type": "maxmindMMDB",
+      "action": "output",
+      "args": {
+        "outputDir": "./output",
+        "outputName": "Country.mmdb",
+        "overwriteList": [
+          "ru-blocked",
+          "ru-blocked-community",
+          "private",
+          "cloudflare",
+          "cloudfront",
+          "facebook",
+          "fastly",
+          "google",
+          "netflix",
+          "telegram",
+          "ddos-guard",
+          "yandex",
+          "twitter",
+          "nnymph-proxy",
+          "all-discord",
+          "all-youtube"
+        ]
+      }
+    },
+    {
+      "type": "maxmindMMDB",
+      "action": "output",
+      "args": {
+        "outputDir": "./output",
+        "outputName": "Country-asn.mmdb",
+        "wantedList": [
+          "cloudflare",
+          "cloudfront",
+          "facebook",
+          "fastly",
+          "google",
+          "netflix",
+          "telegram",
+          "ddos-guard",
+          "yandex",
+          "twitter",
+          "all-discord",
+          "all-youtube"
+        ]
+      }
+    },
+    {
+      "type": "maxmindMMDB",
+      "action": "output",
+      "args": {
+        "outputDir": "./output",
+        "outputName": "Country-ru-only.mmdb",
+        "wantedList": [
+          "ru-blocked",
+          "ru-blocked-community",
+          "re-filter",
+          "nnymph-proxy",
+          "private"
+        ]
+      }
+    },
+    {
+      "type": "singboxSRS",
+      "action": "output"
+    },
+    {
+      "type": "mihomoMRS",
+      "action": "output"
+    },
+    {
+      "type": "text",
+      "action": "output"
+    },
+    {
+      "type": "text",
+      "action": "output",
+      "args": {
+        "outputDir": "./output/nginx/allow",
+        "outputExtension": ".conf",
+        "addPrefixInLine": "allow ",
+        "addSuffixInLine": ";"
+      }
+    },
+    {
+      "type": "text",
+      "action": "output",
+      "args": {
+        "outputDir": "./output/nginx/deny",
+        "outputExtension": ".conf",
+        "addPrefixInLine": "deny ",
+        "addSuffixInLine": ";"
+      }
+    },
+    {
+      "type": "clashRuleSetClassical",
+      "action": "output"
+    },
+    {
+      "type": "clashRuleSet",
+      "action": "output"
+    },
+    {
+      "type": "surgeRuleSet",
+      "action": "output",
+      "args": {
+        "addSuffixInLine": ",no-resolve"
+      }
+    }
+  ]
+}
