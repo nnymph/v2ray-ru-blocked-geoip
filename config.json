@@ -44,7 +44,7 @@
       "action": "add",
       "args": {
         "name": "discord",
-        "uri": "https://iplist.opencck.org/?format=text&data=ip4&site=discord.com&site=discord.gg&site=discord.media"
+        "uri": "https://iplist.opencck.org/?format=text&data=cidr4&site=discord.com&site=discord.gg&site=discord.media"
       }
     },
     {
@@ -52,7 +52,7 @@
       "action": "add",
       "args": {
         "name": "discord",
-        "uri": "https://iplist.opencck.org/?format=text&data=ip6&site=discord.com&site=discord.gg&site=discord.media"
+        "uri": "https://iplist.opencck.org/?format=text&data=cidr6&site=discord.com&site=discord.gg&site=discord.media"
       }
     },
 
