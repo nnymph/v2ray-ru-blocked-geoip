@@ -69,7 +69,7 @@
       "action": "add",
       "args": {
         "name": "nnymph-all-blocked",
-        "uri": "https://raw.githubusercontent.com/V3nilla/IPSets-For-Bypass-in-Russia/blob/main/ipset-all.txt"
+        "uri": "https://raw.githubusercontent.com/V3nilla/IPSets-For-Bypass-in-Russia/main/ipset-all.txt"
       }
     },
     {
