@@ -68,6 +68,14 @@
       "type": "text",
       "action": "add",
       "args": {
+        "name": "nnymph-all-blocked",
+        "uri": "https://raw.githubusercontent.com/V3nilla/IPSets-For-Bypass-in-Russia/blob/main/ipset-all.txt"
+      }
+    },
+    {
+      "type": "text",
+      "action": "add",
+      "args": {
         "name": "nnymph-block",
         "uri": "./v2ray-personal-ip-list/nnymph-block.txt"
       }
@@ -133,7 +141,10 @@
           "ru-blocked",
           "ru-blocked-community",
           "re-filter",
-          "nnymph-proxy"
+          "nnymph-proxy",
+          "nnymph-discord",
+          "nnymph-block",
+          "nnymph-all-blocked"
         ]
       }
     },
@@ -170,6 +181,9 @@
           "ru-blocked-community",
           "re-filter",
           "nnymph-proxy",
+          "nnymph-discord",
+          "nnymph-block",
+          "nnymph-all-blocked",
           "private"
         ]
       }
@@ -184,7 +198,6 @@
           "ru-blocked",
           "ru-blocked-community",
           "re-filter",
-          "nnymph-proxy",
           "private"
         ]
       }
@@ -217,6 +230,9 @@
           "yandex",
           "twitter",
           "nnymph-proxy",
+          "nnymph-discord",
+          "nnymph-block",
+          "nnymph-all-blocked",
           "all-discord",
           "all-youtube"
         ]
@@ -238,9 +254,7 @@
           "telegram",
           "ddos-guard",
           "yandex",
-          "twitter",
-          "all-discord",
-          "all-youtube"
+          "twitter"
         ]
       }
     },
@@ -255,6 +269,9 @@
           "ru-blocked-community",
           "re-filter",
           "nnymph-proxy",
+          "nnymph-discord",
+          "nnymph-block",
+          "nnymph-all-blocked",
           "private"
         ]
       }
