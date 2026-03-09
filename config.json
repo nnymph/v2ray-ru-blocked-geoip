@@ -232,9 +232,7 @@
           "nnymph-proxy",
           "nnymph-discord",
           "nnymph-block",
-          "nnymph-all-blocked",
-          "all-discord",
-          "all-youtube"
+          "nnymph-all-blocked"
         ]
       }
     },
