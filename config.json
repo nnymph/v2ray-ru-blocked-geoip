@@ -132,23 +132,6 @@
       }
     },
     {
-      "type": "text",
-      "action": "output",
-      "args": {
-        "outputDir": "./output",
-        "outputName": "geoip.txt",
-        "wantedList": [
-          "ru-blocked",
-          "ru-blocked-community",
-          "re-filter",
-          "nnymph-proxy",
-          "nnymph-discord",
-          "nnymph-block",
-          "nnymph-all-blocked"
-        ]
-      }
-    },
-    {
       "type": "v2rayGeoIPDat",
       "action": "output",
       "args": {
