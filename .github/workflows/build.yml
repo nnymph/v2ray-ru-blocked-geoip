@@ -97,7 +97,6 @@ jobs:
           rm -rf ./output/GeoLite2-*.csv
           rm -rf ./output/GeoLite2-*.mmdb
           rm -rf ./output/GeoLite2-*.sha256sum
-          rm -rf ./output/{clash,dat,mrs,nginx,srs,surge,text}
 
       - name: Delete old releases (keep 100)
         uses: dev-drprasad/delete-older-releases@v0.3.4

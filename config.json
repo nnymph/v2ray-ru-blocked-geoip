@@ -55,7 +55,6 @@
         "uri": "https://iplist.opencck.org/?format=text&data=cidr6&site=discord.com&site=discord.gg&site=discord.media"
       }
     },
-
     {
       "type": "text",
       "action": "add",
@@ -88,7 +87,6 @@
         "uri": "./v2ray-personal-ip-list/nnymph-direct.txt"
       }
     },
-
     {
       "type": "maxmindGeoLite2ASNCSV",
       "action": "add",
@@ -172,27 +170,6 @@
       }
     },
     {
-      "type": "v2rayGeoIPDat",
-      "action": "output",
-      "args": {
-        "outputDir": "./output",
-        "oneFilePerList": true,
-        "wantedList": [
-          "ru-blocked",
-          "ru-blocked-community",
-          "re-filter",
-          "private"
-        ]
-      }
-    },
-    {
-      "type": "v2rayGeoIPDat",
-      "action": "output",
-      "args": {
-        "oneFilePerList": true
-      }
-    },
-    {
       "type": "maxmindMMDB",
       "action": "output",
       "args": {
@@ -255,53 +232,6 @@
           "nnymph-all-blocked",
           "private"
         ]
-      }
-    },
-    {
-      "type": "singboxSRS",
-      "action": "output"
-    },
-    {
-      "type": "mihomoMRS",
-      "action": "output"
-    },
-    {
-      "type": "text",
-      "action": "output"
-    },
-    {
-      "type": "text",
-      "action": "output",
-      "args": {
-        "outputDir": "./output/nginx/allow",
-        "outputExtension": ".conf",
-        "addPrefixInLine": "allow ",
-        "addSuffixInLine": ";"
-      }
-    },
-    {
-      "type": "text",
-      "action": "output",
-      "args": {
-        "outputDir": "./output/nginx/deny",
-        "outputExtension": ".conf",
-        "addPrefixInLine": "deny ",
-        "addSuffixInLine": ";"
-      }
-    },
-    {
-      "type": "clashRuleSetClassical",
-      "action": "output"
-    },
-    {
-      "type": "clashRuleSet",
-      "action": "output"
-    },
-    {
-      "type": "surgeRuleSet",
-      "action": "output",
-      "args": {
-        "addSuffixInLine": ",no-resolve"
       }
     }
   ]
