@@ -67,6 +67,14 @@
       "type": "text",
       "action": "add",
       "args": {
+        "name": "nnymph-proxy",
+        "uri": "https://raw.githubusercontent.com/Loyalsoldier/geoip/release/text/telegram.txt"
+      }
+    },
+    {
+      "type": "text",
+      "action": "add",
+      "args": {
         "name": "nnymph-all-blocked",
         "uri": "https://raw.githubusercontent.com/V3nilla/IPSets-For-Bypass-in-Russia/main/ipset-all.txt"
       }
