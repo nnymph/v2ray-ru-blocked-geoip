@@ -88,6 +88,22 @@
       }
     },
     {
+      "type": "text",
+      "action": "add",
+      "args": {
+        "name": "nnymph-block-white",
+        "uri": "./v2ray-personal-ip-list/nnymph-block-white.txt"
+      }
+    },
+    {
+      "type": "text",
+      "action": "add",
+      "args": {
+        "name": "nnymph-direct-white",
+        "uri": "./v2ray-personal-ip-list/nnymph-direct-white.txt"
+      }
+    },
+    {
       "type": "maxmindGeoLite2ASNCSV",
       "action": "add",
       "args": {
@@ -164,6 +180,9 @@
           "nnymph-proxy",
           "nnymph-discord",
           "nnymph-block",
+          "nnymph-direct",
+          "nnymph-block-white",
+          "nnymph-direct-white",
           "nnymph-all-blocked",
           "private"
         ]
