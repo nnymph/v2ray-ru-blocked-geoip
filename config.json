@@ -260,6 +260,21 @@
           "private"
         ]
       }
+    },
+    {
+      "type": "text",
+      "action": "output",
+      "args": {
+        "outputDir": "./output/text",
+        "wantedList": [
+          "ru-blocked",
+          "ru-blocked-community",
+          "discord",
+          "nnymph-block",
+          "nnymph-direct",
+          "private"
+        ]
+      }
     }
   ]
 }

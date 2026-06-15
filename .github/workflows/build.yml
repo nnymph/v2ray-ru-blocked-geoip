@@ -50,6 +50,31 @@ jobs:
           go build -C geoip ./
           ./geoip/geoip convert -c ./config.json
 
+      - name: Compile Mihomo IP MRS
+        run: |
+          # Скачиваем бинарник mihomo
+          curl -sSL https://github.com/MetaCubeX/mihomo/releases/download/v1.19.9/mihomo-linux-amd64-v1.19.9.gz | gunzip > mihomo
+          chmod +x mihomo
+
+          # Генерируем YAML-файлы правил Mihomo IP
+          for file in ru-blocked ru-blocked-community discord nnymph-block nnymph-direct private; do
+            if [ -f "./output/text/${file}.txt" ]; then
+              out_name="${file}"
+              if [ "${file}" = "discord" ]; then
+                out_name="discord-ips"
+              fi
+              echo "payload:" > "./output/${out_name}.yaml"
+              grep -v -E '^(#|$)' "./output/text/${file}.txt" | sed 's/^/  - /' >> "./output/${out_name}.yaml"
+              
+              # Компилируем YAML в MRS (тип ipcidr)
+              ./mihomo convert-ruleset ipcidr yaml "./output/${out_name}.yaml" "./output/${out_name}.mrs"
+            fi
+          done
+
+          # Очищаем временные файлы
+          rm -rf ./output/text
+          rm -f mihomo
+
       - name: Verify mmdb files
         run: |
           cd ./output || exit 1
